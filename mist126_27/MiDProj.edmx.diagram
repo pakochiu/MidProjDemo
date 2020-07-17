@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3647a34970ec432cae3ae44bea6b954e" Name="Diagram1" ZoomLevel="42">
+        <EntityTypeShape EntityType="MidProjectModel.tCurrency" Width="1.5" PointX="1.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tCustomer" Width="1.5" PointX="8" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tNewProduct" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tOrderDetail" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tOrderPlatform" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tOrder" Width="1.5" PointX="10.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tPaymentMethod" Width="1.5" PointX="1.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tPicture" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tproduct" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tProductStatu" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tProductType" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tPurchasingOrder" Width="1.5" PointX="3.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tPurchasingOrderDetail" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tStock" Width="1.5" PointX="8.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MidProjectModel.tUser" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="MidProjectModel.FK_tPurchasingOrder_tCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tCustomer_tCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tOrders_tCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tNewProduct_tNewProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tOrderDetail_tNewProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tPurchasingOrderDetail_tNewProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tOrders_tOrderPlatform" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tPurchasingOrder_tPaymentMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tPurchasingOrderDetail_tPurchasingOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="MidProjectModel.FK_tStock_tPurchasingOrderDetail" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

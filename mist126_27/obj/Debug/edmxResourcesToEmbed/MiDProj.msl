@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MidProjectModelStoreContainer" CdmEntityContainer="MidProjectEntities">
+    <EntitySetMapping Name="tCurrencies">
+      <EntityTypeMapping TypeName="MidProjectModel.tCurrency">
+        <MappingFragment StoreEntitySet="tCurrency">
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tCustomers">
+      <EntityTypeMapping TypeName="MidProjectModel.tCustomer">
+        <MappingFragment StoreEntitySet="tCustomer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tNewProducts">
+      <EntityTypeMapping TypeName="MidProjectModel.tNewProduct">
+        <MappingFragment StoreEntitySet="tNewProduct">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="ReoderLevel" ColumnName="ReoderLevel" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tOrderDetails">
+      <EntityTypeMapping TypeName="MidProjectModel.tOrderDetail">
+        <MappingFragment StoreEntitySet="tOrderDetail">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tOrderPlatforms">
+      <EntityTypeMapping TypeName="MidProjectModel.tOrderPlatform">
+        <MappingFragment StoreEntitySet="tOrderPlatform">
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="OrderPlatform" ColumnName="OrderPlatform" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tOrders">
+      <EntityTypeMapping TypeName="MidProjectModel.tOrder">
+        <MappingFragment StoreEntitySet="tOrders">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="BidFee" ColumnName="BidFee" />
+          <ScalarProperty Name="SpecialDiscount" ColumnName="SpecialDiscount" />
+          <ScalarProperty Name="ShippingFee" ColumnName="ShippingFee" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPaymentMethods">
+      <EntityTypeMapping TypeName="MidProjectModel.tPaymentMethod">
+        <MappingFragment StoreEntitySet="tPaymentMethod">
+          <ScalarProperty Name="PaymentMethodID" ColumnName="PaymentMethodID" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPictures">
+      <EntityTypeMapping TypeName="MidProjectModel.tPicture">
+        <MappingFragment StoreEntitySet="tPictures">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tproducts">
+      <EntityTypeMapping TypeName="MidProjectModel.tproduct">
+        <MappingFragment StoreEntitySet="tproduct">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductSpecID" ColumnName="ProductSpecID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tProductStatus">
+      <EntityTypeMapping TypeName="MidProjectModel.tProductStatu">
+        <MappingFragment StoreEntitySet="tProductStatus">
+          <ScalarProperty Name="ProductStatusID" ColumnName="ProductStatusID" />
+          <ScalarProperty Name="ProductStatus" ColumnName="ProductStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tProductTypes">
+      <EntityTypeMapping TypeName="MidProjectModel.tProductType">
+        <MappingFragment StoreEntitySet="tProductType">
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPurchasingOrders">
+      <EntityTypeMapping TypeName="MidProjectModel.tPurchasingOrder">
+        <MappingFragment StoreEntitySet="tPurchasingOrder">
+          <ScalarProperty Name="PurchasingOrderID" ColumnName="PurchasingOrderID" />
+          <ScalarProperty Name="PurchasingDate" ColumnName="PurchasingDate" />
+          <ScalarProperty Name="PaymentMethodID" ColumnName="PaymentMethodID" />
+          <ScalarProperty Name="ServiceFee" ColumnName="ServiceFee" />
+          <ScalarProperty Name="ImportDuty" ColumnName="ImportDuty" />
+          <ScalarProperty Name="tariff" ColumnName="tariff" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ShippingFee" ColumnName="ShippingFee" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPurchasingOrderDetails">
+      <EntityTypeMapping TypeName="MidProjectModel.tPurchasingOrderDetail">
+        <MappingFragment StoreEntitySet="tPurchasingOrderDetail">
+          <ScalarProperty Name="PurchasingOrderDetailID" ColumnName="PurchasingOrderDetailID" />
+          <ScalarProperty Name="PurchasingOrderID" ColumnName="PurchasingOrderID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="ArrivedQuantity" ColumnName="ArrivedQuantity" />
+          <ScalarProperty Name="ReimburseQuantity" ColumnName="ReimburseQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tStocks">
+      <EntityTypeMapping TypeName="MidProjectModel.tStock">
+        <MappingFragment StoreEntitySet="tStock">
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="ProductDetailID" ColumnName="ProductDetailID" />
+          <ScalarProperty Name="PurchasingOrderDetailID" ColumnName="PurchasingOrderDetailID" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="ReoderLevel" ColumnName="ReoderLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tUsers">
+      <EntityTypeMapping TypeName="MidProjectModel.tUser">
+        <MappingFragment StoreEntitySet="tUsers">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

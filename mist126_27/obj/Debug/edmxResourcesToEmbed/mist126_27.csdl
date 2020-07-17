@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mist126_27Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Currency1" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="PurchasingOrder" Relationship="Self.FK_PurchasingOrder_Currency" FromRole="Currency" ToRole="PurchasingOrder" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PlatformID" Type="Int32" />
+    <NavigationProperty Name="OrderPlatform" Relationship="Self.FK_Customer_OrderPlatform" FromRole="Customer" ToRole="OrderPlatform" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Customer" FromRole="Customer" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="NewProduct">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Stock" Type="Int32" />
+    <Property Name="ReoderLevel" Type="Int32" />
+    <NavigationProperty Name="Image" Relationship="Self.FK_Image_NewProduct" FromRole="NewProduct" ToRole="Image" />
+    <NavigationProperty Name="Pictures" Relationship="Self.FK_Picture_NewProduct" FromRole="NewProduct" ToRole="Pictures" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+    <Property Name="subtotal" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Orders" Relationship="mist126_27Model.FK_OrderDetail_Orders" FromRole="OrderDetail" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="OrderPlatform">
+    <Key>
+      <PropertyRef Name="PlatformID" />
+    </Key>
+    <Property Name="PlatformID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderPlatform1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Customer_OrderPlatform" FromRole="OrderPlatform" ToRole="Customer" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_OrderPlatform" FromRole="OrderPlatform" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="PlatformID" Type="Int32" />
+    <Property Name="BidFee" Type="Int32" />
+    <Property Name="SpecialDiscount" Type="Byte" />
+    <Property Name="ShippingFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Orders_Customer" FromRole="Orders" ToRole="Customer" />
+    <NavigationProperty Name="OrderPlatform" Relationship="Self.FK_Orders_OrderPlatform" FromRole="Orders" ToRole="OrderPlatform" />
+    <NavigationProperty Name="OrderDetail" Relationship="mist126_27Model.FK_OrderDetail_Orders" FromRole="Orders" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="PaymentMethod">
+    <Key>
+      <PropertyRef Name="PaymentMethodID" />
+    </Key>
+    <Property Name="PaymentMethodID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentMethod1" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="PurchasingOrder" Relationship="Self.FK_PurchasingOrder_PaymentMethod" FromRole="PaymentMethod" ToRole="PurchasingOrder" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductTypeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProductType" Relationship="Self.FK_Product_ProductType" FromRole="Product" ToRole="ProductType" />
+    <NavigationProperty Name="ProductDetail" Relationship="Self.FK_ProductDetail_Product" FromRole="Product" ToRole="ProductDetail" />
+  </EntityType>
+  <EntityType Name="ProductDetail">
+    <Key>
+      <PropertyRef Name="ProductDetailID" />
+    </Key>
+    <Property Name="ProductDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="ProductStatusID" Type="Int32" />
+    <Property Name="ProductSpec" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProductColour" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSalesPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Stock" Type="Int32" />
+    <Property Name="ReoderLevel" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_ProductDetail_Product" FromRole="ProductDetail" ToRole="Product" />
+    <NavigationProperty Name="ProductStatus" Relationship="Self.FK_ProductDetail_ProductStatus" FromRole="ProductDetail" ToRole="ProductStatus" />
+  </EntityType>
+  <EntityType Name="ProductStatus">
+    <Key>
+      <PropertyRef Name="ProductStatusID" />
+    </Key>
+    <Property Name="ProductStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductStatus1" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductDetail" Relationship="Self.FK_ProductDetail_ProductStatus" FromRole="ProductStatus" ToRole="ProductDetail" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="ProductTypeID" />
+    </Key>
+    <Property Name="ProductTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductType1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Product_ProductType" FromRole="ProductType" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="PurchasingOrder">
+    <Key>
+      <PropertyRef Name="PurchasingOrderID" />
+    </Key>
+    <Property Name="PurchasingOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchasingDate" Type="DateTime" Precision="0" />
+    <Property Name="PaymentMethodID" Type="Int32" />
+    <Property Name="ServiceFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ImportDuty" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tariff" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ShippingFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurrencyID" Type="Int32" />
+    <Property Name="AddDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+    <Property Name="UserID" Type="Int32" />
+    <NavigationProperty Name="Currency" Relationship="Self.FK_PurchasingOrder_Currency" FromRole="PurchasingOrder" ToRole="Currency" />
+    <NavigationProperty Name="PaymentMethod" Relationship="Self.FK_PurchasingOrder_PaymentMethod" FromRole="PurchasingOrder" ToRole="PaymentMethod" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_PurchasingOrder_Users" FromRole="PurchasingOrder" ToRole="Users" />
+    <NavigationProperty Name="PurchasingOrderDetail" Relationship="Self.FK_PurchasingOrderDetail_PurchasingOrder" FromRole="PurchasingOrder" ToRole="PurchasingOrderDetail" />
+  </EntityType>
+  <EntityType Name="PurchasingOrderDetail">
+    <Key>
+      <PropertyRef Name="PurchasingOrderDetailID" />
+    </Key>
+    <Property Name="PurchasingOrderDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchasingOrderID" Type="Int32" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Discount" Type="Byte" />
+    <Property Name="SubTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ArrivedQuantity" Type="Int32" />
+    <Property Name="ReimburseQuantity" Type="Int32" />
+    <NavigationProperty Name="PurchasingOrder" Relationship="Self.FK_PurchasingOrderDetail_PurchasingOrder" FromRole="PurchasingOrderDetail" ToRole="PurchasingOrder" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductDetailID" Type="Int32" />
+    <Property Name="PurchasingOrderDetailID" Type="Int32" />
+    <Property Name="Stock1" Type="Int32" />
+    <Property Name="ReoderLevel" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="Binary" MaxLength="32" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="PurchasingOrder" Relationship="Self.FK_PurchasingOrder_Users" FromRole="Users" ToRole="PurchasingOrder" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ImageLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="NewProduct" Relationship="Self.FK_Image_NewProduct" FromRole="Image" ToRole="NewProduct" />
+  </EntityType>
+  <EntityType Name="Pictures">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="NewProduct" Relationship="Self.FK_Picture_NewProduct" FromRole="Pictures" ToRole="NewProduct" />
+  </EntityType>
+  <Association Name="FK_PurchasingOrder_Currency">
+    <End Role="Currency" Type="Self.Currency" Multiplicity="0..1" />
+    <End Role="PurchasingOrder" Type="Self.PurchasingOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="CurrencyID" />
+      </Principal>
+      <Dependent Role="PurchasingOrder">
+        <PropertyRef Name="CurrencyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_OrderPlatform">
+    <End Role="OrderPlatform" Type="Self.OrderPlatform" Multiplicity="0..1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderPlatform">
+        <PropertyRef Name="PlatformID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="PlatformID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Image_NewProduct">
+    <End Role="NewProduct" Type="Self.NewProduct" Multiplicity="1" />
+    <End Role="Image" Type="Self.Image" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="NewProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Picture_NewProduct">
+    <End Role="NewProduct" Type="Self.NewProduct" Multiplicity="1" />
+    <End Role="Pictures" Type="Self.Pictures" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="NewProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Pictures">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_OrderPlatform">
+    <End Role="OrderPlatform" Type="Self.OrderPlatform" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderPlatform">
+        <PropertyRef Name="PlatformID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="PlatformID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasingOrder_PaymentMethod">
+    <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="0..1" />
+    <End Role="PurchasingOrder" Type="Self.PurchasingOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethod">
+        <PropertyRef Name="PaymentMethodID" />
+      </Principal>
+      <Dependent Role="PurchasingOrder">
+        <PropertyRef Name="PaymentMethodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductType">
+    <End Role="ProductType" Type="Self.ProductType" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductType">
+        <PropertyRef Name="ProductTypeID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDetail_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="ProductDetail" Type="Self.ProductDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ProductDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDetail_ProductStatus">
+    <End Role="ProductStatus" Type="Self.ProductStatus" Multiplicity="0..1" />
+    <End Role="ProductDetail" Type="Self.ProductDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductStatus">
+        <PropertyRef Name="ProductStatusID" />
+      </Principal>
+      <Dependent Role="ProductDetail">
+        <PropertyRef Name="ProductStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasingOrder_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="PurchasingOrder" Type="Self.PurchasingOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PurchasingOrder">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasingOrderDetail_PurchasingOrder">
+    <End Role="PurchasingOrder" Type="Self.PurchasingOrder" Multiplicity="0..1" />
+    <End Role="PurchasingOrderDetail" Type="Self.PurchasingOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchasingOrder">
+        <PropertyRef Name="PurchasingOrderID" />
+      </Principal>
+      <Dependent Role="PurchasingOrderDetail">
+        <PropertyRef Name="PurchasingOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mist126_27Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Currency" EntityType="Self.Currency" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" />
+    <EntitySet Name="NewProduct" EntityType="Self.NewProduct" />
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" />
+    <EntitySet Name="OrderPlatform" EntityType="Self.OrderPlatform" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="PaymentMethod" EntityType="Self.PaymentMethod" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="ProductDetail" EntityType="Self.ProductDetail" />
+    <EntitySet Name="ProductStatus" EntityType="Self.ProductStatus" />
+    <EntitySet Name="ProductType" EntityType="Self.ProductType" />
+    <EntitySet Name="PurchasingOrder" EntityType="Self.PurchasingOrder" />
+    <EntitySet Name="PurchasingOrderDetail" EntityType="Self.PurchasingOrderDetail" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Image" EntityType="Self.Image" />
+    <EntitySet Name="Pictures" EntityType="Self.Pictures" />
+    <AssociationSet Name="FK_PurchasingOrder_Currency" Association="Self.FK_PurchasingOrder_Currency">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="PurchasingOrder" EntitySet="PurchasingOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_OrderPlatform" Association="Self.FK_Customer_OrderPlatform">
+      <End Role="OrderPlatform" EntitySet="OrderPlatform" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Customer" Association="Self.FK_Orders_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Image_NewProduct" Association="Self.FK_Image_NewProduct">
+      <End Role="NewProduct" EntitySet="NewProduct" />
+      <End Role="Image" EntitySet="Image" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Picture_NewProduct" Association="Self.FK_Picture_NewProduct">
+      <End Role="NewProduct" EntitySet="NewProduct" />
+      <End Role="Pictures" EntitySet="Pictures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_OrderPlatform" Association="Self.FK_Orders_OrderPlatform">
+      <End Role="OrderPlatform" EntitySet="OrderPlatform" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasingOrder_PaymentMethod" Association="Self.FK_PurchasingOrder_PaymentMethod">
+      <End Role="PaymentMethod" EntitySet="PaymentMethod" />
+      <End Role="PurchasingOrder" EntitySet="PurchasingOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductType" Association="Self.FK_Product_ProductType">
+      <End Role="ProductType" EntitySet="ProductType" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDetail_Product" Association="Self.FK_ProductDetail_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductDetail" EntitySet="ProductDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDetail_ProductStatus" Association="Self.FK_ProductDetail_ProductStatus">
+      <End Role="ProductStatus" EntitySet="ProductStatus" />
+      <End Role="ProductDetail" EntitySet="ProductDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasingOrder_Users" Association="Self.FK_PurchasingOrder_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="PurchasingOrder" EntitySet="PurchasingOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasingOrderDetail_PurchasingOrder" Association="Self.FK_PurchasingOrderDetail_PurchasingOrder">
+      <End Role="PurchasingOrder" EntitySet="PurchasingOrder" />
+      <End Role="PurchasingOrderDetail" EntitySet="PurchasingOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Orders" Association="mist126_27Model.FK_OrderDetail_Orders">
+      <End EntitySet="Orders" Role="Orders" />
+      <End EntitySet="OrderDetail" Role="OrderDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_OrderDetail_Orders">
+    <End Type="mist126_27Model.Orders" Multiplicity="1" Role="Orders" />
+    <End Type="mist126_27Model.OrderDetail" Multiplicity="0..1" Role="OrderDetail" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

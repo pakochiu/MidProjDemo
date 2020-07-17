@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mist126_27Model1StoreContainer" CdmEntityContainer="mist126_27Entities1">
+    <EntitySetMapping Name="PendingItems">
+      <EntityTypeMapping TypeName="mist126_27Model1.PendingItem">
+        <MappingFragment StoreEntitySet="PendingItem">
+          <ScalarProperty Name="PendingPK" ColumnName="PendingPK" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="CheckBox" ColumnName="CheckBox" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

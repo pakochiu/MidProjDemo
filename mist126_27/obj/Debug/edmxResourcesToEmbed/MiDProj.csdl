@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MidProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tCurrency">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Currency" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="tPurchasingOrders" Relationship="Self.FK_tPurchasingOrder_tCurrency" FromRole="tCurrency" ToRole="tPurchasingOrder" />
+  </EntityType>
+  <EntityType Name="tCustomer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="PlatformID" Type="Int32" />
+    <NavigationProperty Name="tOrderPlatform" Relationship="Self.FK_tCustomer_tCustomer" FromRole="tCustomer" ToRole="tOrderPlatform" />
+    <NavigationProperty Name="tOrders" Relationship="Self.FK_tOrders_tCustomer" FromRole="tCustomer" ToRole="tOrders" />
+  </EntityType>
+  <EntityType Name="tNewProduct">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Stock" Type="Int32" />
+    <Property Name="ReoderLevel" Type="Int32" />
+    <Property Name="Image" Type="Binary" MaxLength="50" FixedLength="true" />
+    <NavigationProperty Name="tNewProduct1" Relationship="Self.FK_tNewProduct_tNewProduct" FromRole="tNewProduct" ToRole="tNewProduct1" />
+    <NavigationProperty Name="tNewProduct2" Relationship="Self.FK_tNewProduct_tNewProduct" FromRole="tNewProduct1" ToRole="tNewProduct" />
+    <NavigationProperty Name="tOrderDetails" Relationship="Self.FK_tOrderDetail_tNewProduct" FromRole="tNewProduct" ToRole="tOrderDetail" />
+    <NavigationProperty Name="tPurchasingOrderDetails" Relationship="Self.FK_tPurchasingOrderDetail_tNewProduct" FromRole="tNewProduct" ToRole="tPurchasingOrderDetail" />
+  </EntityType>
+  <EntityType Name="tOrderDetail">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+    <Property Name="subtotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="tNewProduct" Relationship="Self.FK_tOrderDetail_tNewProduct" FromRole="tOrderDetail" ToRole="tNewProduct" />
+  </EntityType>
+  <EntityType Name="tOrderPlatform">
+    <Key>
+      <PropertyRef Name="PlatformID" />
+    </Key>
+    <Property Name="PlatformID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderPlatform" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tCustomers" Relationship="Self.FK_tCustomer_tCustomer" FromRole="tOrderPlatform" ToRole="tCustomer" />
+    <NavigationProperty Name="tOrders" Relationship="Self.FK_tOrders_tOrderPlatform" FromRole="tOrderPlatform" ToRole="tOrders" />
+  </EntityType>
+  <EntityType Name="tOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="PlatformID" Type="Int32" />
+    <Property Name="BidFee" Type="Int32" />
+    <Property Name="SpecialDiscount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ShippingFee" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="tCustomer" Relationship="Self.FK_tOrders_tCustomer" FromRole="tOrders" ToRole="tCustomer" />
+    <NavigationProperty Name="tOrderPlatform" Relationship="Self.FK_tOrders_tOrderPlatform" FromRole="tOrders" ToRole="tOrderPlatform" />
+  </EntityType>
+  <EntityType Name="tPaymentMethod">
+    <Key>
+      <PropertyRef Name="PaymentMethodID" />
+    </Key>
+    <Property Name="PaymentMethodID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentMethod" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tPurchasingOrders" Relationship="Self.FK_tPurchasingOrder_tPaymentMethod" FromRole="tPaymentMethod" ToRole="tPurchasingOrder" />
+  </EntityType>
+  <EntityType Name="tPicture">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tproduct">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductSpecID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ProductName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tProductStatu">
+    <Key>
+      <PropertyRef Name="ProductStatusID" />
+    </Key>
+    <Property Name="ProductStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tProductType">
+    <Key>
+      <PropertyRef Name="ProductTypeID" />
+    </Key>
+    <Property Name="ProductTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tPurchasingOrder">
+    <Key>
+      <PropertyRef Name="PurchasingOrderID" />
+    </Key>
+    <Property Name="PurchasingOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchasingDate" Type="DateTime" Precision="0" />
+    <Property Name="PaymentMethodID" Type="Int32" />
+    <Property Name="ServiceFee" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ImportDuty" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="tariff" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ShippingFee" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CurrencyID" Type="Int32" />
+    <NavigationProperty Name="tCurrency" Relationship="Self.FK_tPurchasingOrder_tCurrency" FromRole="tPurchasingOrder" ToRole="tCurrency" />
+    <NavigationProperty Name="tPaymentMethod" Relationship="Self.FK_tPurchasingOrder_tPaymentMethod" FromRole="tPurchasingOrder" ToRole="tPaymentMethod" />
+    <NavigationProperty Name="tPurchasingOrderDetails" Relationship="Self.FK_tPurchasingOrderDetail_tPurchasingOrder" FromRole="tPurchasingOrder" ToRole="tPurchasingOrderDetail" />
+  </EntityType>
+  <EntityType Name="tPurchasingOrderDetail">
+    <Key>
+      <PropertyRef Name="PurchasingOrderDetailID" />
+    </Key>
+    <Property Name="PurchasingOrderDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchasingOrderID" Type="Int32" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SubTotal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ArrivedQuantity" Type="Int32" />
+    <Property Name="ReimburseQuantity" Type="Int32" />
+    <NavigationProperty Name="tNewProduct" Relationship="Self.FK_tPurchasingOrderDetail_tNewProduct" FromRole="tPurchasingOrderDetail" ToRole="tNewProduct" />
+    <NavigationProperty Name="tPurchasingOrder" Relationship="Self.FK_tPurchasingOrderDetail_tPurchasingOrder" FromRole="tPurchasingOrderDetail" ToRole="tPurchasingOrder" />
+    <NavigationProperty Name="tStocks" Relationship="Self.FK_tStock_tPurchasingOrderDetail" FromRole="tPurchasingOrderDetail" ToRole="tStock" />
+  </EntityType>
+  <EntityType Name="tStock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductDetailID" Type="Int32" />
+    <Property Name="PurchasingOrderDetailID" Type="Int32" />
+    <Property Name="Stock" Type="Int32" />
+    <Property Name="ReoderLevel" Type="Int32" />
+    <NavigationProperty Name="tPurchasingOrderDetail" Relationship="Self.FK_tStock_tPurchasingOrderDetail" FromRole="tStock" ToRole="tPurchasingOrderDetail" />
+  </EntityType>
+  <EntityType Name="tUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="Binary" MaxLength="32" FixedLength="true" />
+  </EntityType>
+  <Association Name="FK_tPurchasingOrder_tCurrency">
+    <End Role="tCurrency" Type="Self.tCurrency" Multiplicity="0..1" />
+    <End Role="tPurchasingOrder" Type="Self.tPurchasingOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tCurrency">
+        <PropertyRef Name="CurrencyID" />
+      </Principal>
+      <Dependent Role="tPurchasingOrder">
+        <PropertyRef Name="CurrencyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tCustomer_tCustomer">
+    <End Role="tOrderPlatform" Type="Self.tOrderPlatform" Multiplicity="0..1" />
+    <End Role="tCustomer" Type="Self.tCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tOrderPlatform">
+        <PropertyRef Name="PlatformID" />
+      </Principal>
+      <Dependent Role="tCustomer">
+        <PropertyRef Name="PlatformID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tOrders_tCustomer">
+    <End Role="tCustomer" Type="Self.tCustomer" Multiplicity="0..1" />
+    <End Role="tOrders" Type="Self.tOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tCustomer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="tOrders">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tNewProduct_tNewProduct">
+    <End Role="tNewProduct" Type="Self.tNewProduct" Multiplicity="1" />
+    <End Role="tNewProduct1" Type="Self.tNewProduct" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tNewProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="tNewProduct1">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tOrderDetail_tNewProduct">
+    <End Role="tNewProduct" Type="Self.tNewProduct" Multiplicity="1" />
+    <End Role="tOrderDetail" Type="Self.tOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tNewProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="tOrderDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tPurchasingOrderDetail_tNewProduct">
+    <End Role="tNewProduct" Type="Self.tNewProduct" Multiplicity="0..1" />
+    <End Role="tPurchasingOrderDetail" Type="Self.tPurchasingOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tNewProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="tPurchasingOrderDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tOrders_tOrderPlatform">
+    <End Role="tOrderPlatform" Type="Self.tOrderPlatform" Multiplicity="0..1" />
+    <End Role="tOrders" Type="Self.tOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tOrderPlatform">
+        <PropertyRef Name="PlatformID" />
+      </Principal>
+      <Dependent Role="tOrders">
+        <PropertyRef Name="PlatformID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tPurchasingOrder_tPaymentMethod">
+    <End Role="tPaymentMethod" Type="Self.tPaymentMethod" Multiplicity="0..1" />
+    <End Role="tPurchasingOrder" Type="Self.tPurchasingOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tPaymentMethod">
+        <PropertyRef Name="PaymentMethodID" />
+      </Principal>
+      <Dependent Role="tPurchasingOrder">
+        <PropertyRef Name="PaymentMethodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tPurchasingOrderDetail_tPurchasingOrder">
+    <End Role="tPurchasingOrder" Type="Self.tPurchasingOrder" Multiplicity="0..1" />
+    <End Role="tPurchasingOrderDetail" Type="Self.tPurchasingOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tPurchasingOrder">
+        <PropertyRef Name="PurchasingOrderID" />
+      </Principal>
+      <Dependent Role="tPurchasingOrderDetail">
+        <PropertyRef Name="PurchasingOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tStock_tPurchasingOrderDetail">
+    <End Role="tPurchasingOrderDetail" Type="Self.tPurchasingOrderDetail" Multiplicity="0..1" />
+    <End Role="tStock" Type="Self.tStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tPurchasingOrderDetail">
+        <PropertyRef Name="PurchasingOrderDetailID" />
+      </Principal>
+      <Dependent Role="tStock">
+        <PropertyRef Name="PurchasingOrderDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MidProjectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tCurrencies" EntityType="Self.tCurrency" />
+    <EntitySet Name="tCustomers" EntityType="Self.tCustomer" />
+    <EntitySet Name="tNewProducts" EntityType="Self.tNewProduct" />
+    <EntitySet Name="tOrderDetails" EntityType="Self.tOrderDetail" />
+    <EntitySet Name="tOrderPlatforms" EntityType="Self.tOrderPlatform" />
+    <EntitySet Name="tOrders" EntityType="Self.tOrder" />
+    <EntitySet Name="tPaymentMethods" EntityType="Self.tPaymentMethod" />
+    <EntitySet Name="tPictures" EntityType="Self.tPicture" />
+    <EntitySet Name="tproducts" EntityType="Self.tproduct" />
+    <EntitySet Name="tProductStatus" EntityType="Self.tProductStatu" />
+    <EntitySet Name="tProductTypes" EntityType="Self.tProductType" />
+    <EntitySet Name="tPurchasingOrders" EntityType="Self.tPurchasingOrder" />
+    <EntitySet Name="tPurchasingOrderDetails" EntityType="Self.tPurchasingOrderDetail" />
+    <EntitySet Name="tStocks" EntityType="Self.tStock" />
+    <EntitySet Name="tUsers" EntityType="Self.tUser" />
+    <AssociationSet Name="FK_tPurchasingOrder_tCurrency" Association="Self.FK_tPurchasingOrder_tCurrency">
+      <End Role="tCurrency" EntitySet="tCurrencies" />
+      <End Role="tPurchasingOrder" EntitySet="tPurchasingOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tCustomer_tCustomer" Association="Self.FK_tCustomer_tCustomer">
+      <End Role="tOrderPlatform" EntitySet="tOrderPlatforms" />
+      <End Role="tCustomer" EntitySet="tCustomers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tOrders_tCustomer" Association="Self.FK_tOrders_tCustomer">
+      <End Role="tCustomer" EntitySet="tCustomers" />
+      <End Role="tOrders" EntitySet="tOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tNewProduct_tNewProduct" Association="Self.FK_tNewProduct_tNewProduct">
+      <End Role="tNewProduct" EntitySet="tNewProducts" />
+      <End Role="tNewProduct1" EntitySet="tNewProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tOrderDetail_tNewProduct" Association="Self.FK_tOrderDetail_tNewProduct">
+      <End Role="tNewProduct" EntitySet="tNewProducts" />
+      <End Role="tOrderDetail" EntitySet="tOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tPurchasingOrderDetail_tNewProduct" Association="Self.FK_tPurchasingOrderDetail_tNewProduct">
+      <End Role="tNewProduct" EntitySet="tNewProducts" />
+      <End Role="tPurchasingOrderDetail" EntitySet="tPurchasingOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tOrders_tOrderPlatform" Association="Self.FK_tOrders_tOrderPlatform">
+      <End Role="tOrderPlatform" EntitySet="tOrderPlatforms" />
+      <End Role="tOrders" EntitySet="tOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tPurchasingOrder_tPaymentMethod" Association="Self.FK_tPurchasingOrder_tPaymentMethod">
+      <End Role="tPaymentMethod" EntitySet="tPaymentMethods" />
+      <End Role="tPurchasingOrder" EntitySet="tPurchasingOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tPurchasingOrderDetail_tPurchasingOrder" Association="Self.FK_tPurchasingOrderDetail_tPurchasingOrder">
+      <End Role="tPurchasingOrder" EntitySet="tPurchasingOrders" />
+      <End Role="tPurchasingOrderDetail" EntitySet="tPurchasingOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tStock_tPurchasingOrderDetail" Association="Self.FK_tStock_tPurchasingOrderDetail">
+      <End Role="tPurchasingOrderDetail" EntitySet="tPurchasingOrderDetails" />
+      <End Role="tStock" EntitySet="tStocks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

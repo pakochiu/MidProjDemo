@@ -1,0 +1,182 @@
+C:\Users\User\Desktop\mist126_27\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\User\Desktop\mist126_27\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\User\Desktop\mist126_27\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\User\Desktop\mist126_27\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\User\Desktop\mist126_27\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\User\Desktop\mist126_27\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\User\Desktop\mist126_27\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mist126_27\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\User\Desktop\mist126_27\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\User\Desktop\mist126_27\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\User\Desktop\mist126_27\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - TestForLogin\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.FrmChar.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.FrmAddType.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\EntityFramework.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\EntityFramework.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.csproj.CopyComplete
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\bin\Debug\EntityFramework.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\bin\Debug\EntityFramework.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.FrmAddType.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.FrmChar.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.csproj.CopyComplete
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 複製下課backup - 複製\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\bin\Debug\EntityFramework.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\bin\Debug\EntityFramework.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.FrmAddType.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.FrmChar.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.csproj.CopyComplete
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\bin\Debug\EntityFramework.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\bin\Debug\EntityFramework.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.FrmAddType.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.FrmChar.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.csproj.CopyComplete
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\bin\Debug\EntityFramework.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\bin\Debug\EntityFramework.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.FrmAddType.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.FrmChar.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.csproj.CopyComplete
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147 - 複製 - 複製\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.AddNewProductUserControl1.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27 - 202004250147\mist126_27\obj\Debug\mist126_27.PendingItemUserControl1.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.AddNewProductUserControl1.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\obj\Debug\mist126_27.PendingItemUserControl1.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27\mist126_27\bin\Debug\ChatControlLibrary1.pdb
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\EntityFramework.dll
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\ChatControlLibrary1.pdb
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\EntityFramework.xml
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.AddNewProductUserControl1.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.FrmAddType.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.FrmChar.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.PendingItemUserControl1.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.csproj.CopyComplete
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.csprojAssemblyReference.cache
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.AddNewProductUserControl1.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.FrmAddType.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.FrmChar.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.Login.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.MainPage.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.PendingItemUserControl1.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.Properties.Resources.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.Registeration.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.csproj.GenerateResource.cache
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.exe
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.pdb
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\mist126_27.exe.config
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\mist126_27.exe
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\mist126_27.pdb
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\EntityFramework.dll
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\ChatControlLibrary1.pdb
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\EntityFramework.xml
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\mist126_27\obj\Debug\mist126_27.csproj.CopyComplete

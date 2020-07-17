@@ -1,0 +1,23 @@
+C:\Users\o2002\Desktop\期中報告\mist126_27\ChatControlLibrary1\bin\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27\ChatControlLibrary1\bin\Debug\ChatControlLibrary1.pdb
+C:\Users\o2002\Desktop\期中報告\mist126_27\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.csprojAssemblyReference.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.UserControl1.resources
+C:\Users\o2002\Desktop\期中報告\mist126_27\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.csproj.GenerateResource.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Desktop\期中報告\mist126_27\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Desktop\期中報告\mist126_27\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.pdb
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\ChatControlLibrary1\bin\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\ChatControlLibrary1\bin\Debug\ChatControlLibrary1.pdb
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.csprojAssemblyReference.cache
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.UserControl1.resources
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.csproj.GenerateResource.cache
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Documents\上課_Backup\mist126_27 - 04272257\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.pdb
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\ChatControlLibrary1\bin\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\ChatControlLibrary1\bin\Debug\ChatControlLibrary1.pdb
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.UserControl1.resources
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.csproj.GenerateResource.cache
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.dll
+C:\Users\o2002\Documents\期中報告\mist126_27 - test\ChatControlLibrary1\obj\Debug\ChatControlLibrary1.pdb

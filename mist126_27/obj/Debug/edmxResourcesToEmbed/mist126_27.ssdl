@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="mist126_27Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="Currency" MaxLength="3" Type="char" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="Account" MaxLength="15" Type="varchar" />
+    <Property Name="PlatformID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'mist126_27.dbo.Image' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Nullable="false" Type="int" />
+    <Property Name="ImageLink" MaxLength="255" Type="varchar" />
+  </EntityType>
+  <EntityType Name="NewProduct">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ProductName" Nullable="false" MaxLength="25" Type="nvarchar" />
+    <Property Name="Type" MaxLength="10" Type="nvarchar" />
+    <Property Name="Status" MaxLength="10" Type="varchar" />
+    <Property Name="Color" MaxLength="10" Type="varchar" />
+    <Property Name="Price" Nullable="false" Type="int" />
+    <Property Name="Stock" Type="int" />
+    <Property Name="ReoderLevel" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Nullable="false" Type="int" />
+    <Property Name="ProductID" Nullable="false" Type="int" />
+    <Property Name="Quantity" Nullable="false" Type="int" />
+    <Property Name="Price" Nullable="false" Type="money" />
+    <Property Name="Discount" Nullable="false" Type="int" />
+    <Property Name="subtotal" Nullable="false" Type="money" />
+  </EntityType>
+  <EntityType Name="OrderPlatform">
+    <Key>
+      <PropertyRef Name="PlatformID" />
+    </Key>
+    <Property Name="PlatformID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="OrderPlatform" MaxLength="8" Type="char" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="OrderDate" Type="date" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="PlatformID" Type="int" />
+    <Property Name="BidFee" Type="int" />
+    <Property Name="SpecialDiscount" Type="tinyint" />
+    <Property Name="ShippingFee" Type="money" />
+    <Property Name="TotalPrice" Type="money" />
+  </EntityType>
+  <EntityType Name="PaymentMethod">
+    <Key>
+      <PropertyRef Name="PaymentMethodID" />
+    </Key>
+    <Property Name="PaymentMethodID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="PaymentMethod" MaxLength="6" Type="char" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'mist126_27.dbo.Pictures' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Pictures">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Nullable="false" Type="int" />
+    <Property Name="Picture" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ProductName" Nullable="false" MaxLength="25" Type="nvarchar" />
+    <Property Name="ProductTypeID" Nullable="false" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductDetail">
+    <Key>
+      <PropertyRef Name="ProductDetailID" />
+    </Key>
+    <Property Name="ProductDetailID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="ProductStatusID" Type="int" />
+    <Property Name="ProductSpec" MaxLength="10" Type="varchar" />
+    <Property Name="ProductColour" MaxLength="10" Type="varchar" />
+    <Property Name="ProductSalesPrice" Type="money" />
+    <Property Name="Stock" Type="int" />
+    <Property Name="ReoderLevel" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductStatus">
+    <Key>
+      <PropertyRef Name="ProductStatusID" />
+    </Key>
+    <Property Name="ProductStatusID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ProductStatus" MaxLength="6" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="ProductTypeID" />
+    </Key>
+    <Property Name="ProductTypeID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ProductType" MaxLength="10" Type="varchar" />
+  </EntityType>
+  <EntityType Name="PurchasingOrder">
+    <Key>
+      <PropertyRef Name="PurchasingOrderID" />
+    </Key>
+    <Property Name="PurchasingOrderID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="PurchasingDate" Type="date" />
+    <Property Name="PaymentMethodID" Type="int" />
+    <Property Name="ServiceFee" Type="money" />
+    <Property Name="ImportDuty" Type="money" />
+    <Property Name="tariff" Type="money" />
+    <Property Name="TotalPrice" Type="money" />
+    <Property Name="ShippingFee" Type="money" />
+    <Property Name="CurrencyID" Type="int" />
+    <Property Name="AddDate" Type="date" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="PurchasingOrderDetail">
+    <Key>
+      <PropertyRef Name="PurchasingOrderDetailID" />
+    </Key>
+    <Property Name="PurchasingOrderDetailID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="PurchasingOrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="UnitPrice" Type="money" />
+    <Property Name="Discount" Type="tinyint" />
+    <Property Name="SubTotal" Type="money" />
+    <Property Name="ArrivedQuantity" Type="int" />
+    <Property Name="ReimburseQuantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ProductDetailID" Type="int" />
+    <Property Name="PurchasingOrderDetailID" Type="int" />
+    <Property Name="Stock" Type="int" />
+    <Property Name="ReoderLevel" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Nullable="false" MaxLength="128" Type="nvarchar" />
+    <Property Name="principal_id" Nullable="false" Type="int" />
+    <Property Name="diagram_id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="UserName" Nullable="false" MaxLength="20" Type="varchar" />
+    <Property Name="Password" Nullable="false" MaxLength="32" Type="varbinary" />
+  </EntityType>
+  <Association Name="FK_Customer_OrderPlatform">
+    <End Type="Self.OrderPlatform" Multiplicity="0..1" Role="OrderPlatform" />
+    <End Type="Self.Customer" Multiplicity="*" Role="Customer" />
+    <ReferentialConstraint>
+      <Principal Role="OrderPlatform">
+        <PropertyRef Name="PlatformID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="PlatformID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Image_NewProduct">
+    <End Type="Self.NewProduct" Multiplicity="1" Role="NewProduct" />
+    <End Type="Self.Image" Multiplicity="0..1" Role="Image" />
+    <ReferentialConstraint>
+      <Principal Role="NewProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Orders">
+    <End Type="Self.Orders" Multiplicity="1" Role="Orders" />
+    <End Type="Self.OrderDetail" Multiplicity="0..1" Role="OrderDetail" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Customer">
+    <End Type="Self.Customer" Multiplicity="0..1" Role="Customer" />
+    <End Type="Self.Orders" Multiplicity="*" Role="Orders" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_OrderPlatform">
+    <End Type="Self.OrderPlatform" Multiplicity="0..1" Role="OrderPlatform" />
+    <End Type="Self.Orders" Multiplicity="*" Role="Orders" />
+    <ReferentialConstraint>
+      <Principal Role="OrderPlatform">
+        <PropertyRef Name="PlatformID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="PlatformID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Picture_NewProduct">
+    <End Type="Self.NewProduct" Multiplicity="1" Role="NewProduct" />
+    <End Type="Self.Pictures" Multiplicity="0..1" Role="Pictures" />
+    <ReferentialConstraint>
+      <Principal Role="NewProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Pictures">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductType">
+    <End Type="Self.ProductType" Multiplicity="1" Role="ProductType" />
+    <End Type="Self.Product" Multiplicity="*" Role="Product" />
+    <ReferentialConstraint>
+      <Principal Role="ProductType">
+        <PropertyRef Name="ProductTypeID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDetail_Product">
+    <End Type="Self.Product" Multiplicity="0..1" Role="Product" />
+    <End Type="Self.ProductDetail" Multiplicity="*" Role="ProductDetail" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ProductDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDetail_ProductStatus">
+    <End Type="Self.ProductStatus" Multiplicity="0..1" Role="ProductStatus" />
+    <End Type="Self.ProductDetail" Multiplicity="*" Role="ProductDetail" />
+    <ReferentialConstraint>
+      <Principal Role="ProductStatus">
+        <PropertyRef Name="ProductStatusID" />
+      </Principal>
+      <Dependent Role="ProductDetail">
+        <PropertyRef Name="ProductStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasingOrder_Currency">
+    <End Type="Self.Currency" Multiplicity="0..1" Role="Currency" />
+    <End Type="Self.PurchasingOrder" Multiplicity="*" Role="PurchasingOrder" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="CurrencyID" />
+      </Principal>
+      <Dependent Role="PurchasingOrder">
+        <PropertyRef Name="CurrencyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasingOrder_PaymentMethod">
+    <End Type="Self.PaymentMethod" Multiplicity="0..1" Role="PaymentMethod" />
+    <End Type="Self.PurchasingOrder" Multiplicity="*" Role="PurchasingOrder" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethod">
+        <PropertyRef Name="PaymentMethodID" />
+      </Principal>
+      <Dependent Role="PurchasingOrder">
+        <PropertyRef Name="PaymentMethodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasingOrder_Users">
+    <End Type="Self.Users" Multiplicity="0..1" Role="Users" />
+    <End Type="Self.PurchasingOrder" Multiplicity="*" Role="PurchasingOrder" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PurchasingOrder">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasingOrderDetail_PurchasingOrder">
+    <End Type="Self.PurchasingOrder" Multiplicity="0..1" Role="PurchasingOrder" />
+    <End Type="Self.PurchasingOrderDetail" Multiplicity="*" Role="PurchasingOrderDetail" />
+    <ReferentialConstraint>
+      <Principal Role="PurchasingOrder">
+        <PropertyRef Name="PurchasingOrderID" />
+      </Principal>
+      <Dependent Role="PurchasingOrderDetail">
+        <PropertyRef Name="PurchasingOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mist126_27ModelStoreContainer">
+    <EntitySet Name="Currency" EntityType="Self.Currency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewProduct" EntityType="Self.NewProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderPlatform" EntityType="Self.OrderPlatform" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentMethod" EntityType="Self.PaymentMethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductDetail" EntityType="Self.ProductDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductStatus" EntityType="Self.ProductStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductType" EntityType="Self.ProductType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchasingOrder" EntityType="Self.PurchasingOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchasingOrderDetail" EntityType="Self.PurchasingOrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Image" EntityType="Self.Image" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Image].[ProductID] AS [ProductID], 
+    [Image].[ImageLink] AS [ImageLink]
+    FROM [dbo].[Image] AS [Image]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Pictures" EntityType="Self.Pictures" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Pictures].[ProductID] AS [ProductID], 
+    [Pictures].[Picture] AS [Picture]
+    FROM [dbo].[Pictures] AS [Pictures]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Customer_OrderPlatform" Association="Self.FK_Customer_OrderPlatform">
+      <End EntitySet="OrderPlatform" Role="OrderPlatform" />
+      <End EntitySet="Customer" Role="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Image_NewProduct" Association="Self.FK_Image_NewProduct">
+      <End EntitySet="NewProduct" Role="NewProduct" />
+      <End EntitySet="Image" Role="Image" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Orders" Association="Self.FK_OrderDetail_Orders">
+      <End EntitySet="Orders" Role="Orders" />
+      <End EntitySet="OrderDetail" Role="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Customer" Association="Self.FK_Orders_Customer">
+      <End EntitySet="Customer" Role="Customer" />
+      <End EntitySet="Orders" Role="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_OrderPlatform" Association="Self.FK_Orders_OrderPlatform">
+      <End EntitySet="OrderPlatform" Role="OrderPlatform" />
+      <End EntitySet="Orders" Role="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Picture_NewProduct" Association="Self.FK_Picture_NewProduct">
+      <End EntitySet="NewProduct" Role="NewProduct" />
+      <End EntitySet="Pictures" Role="Pictures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductType" Association="Self.FK_Product_ProductType">
+      <End EntitySet="ProductType" Role="ProductType" />
+      <End EntitySet="Product" Role="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDetail_Product" Association="Self.FK_ProductDetail_Product">
+      <End EntitySet="Product" Role="Product" />
+      <End EntitySet="ProductDetail" Role="ProductDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDetail_ProductStatus" Association="Self.FK_ProductDetail_ProductStatus">
+      <End EntitySet="ProductStatus" Role="ProductStatus" />
+      <End EntitySet="ProductDetail" Role="ProductDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasingOrder_Currency" Association="Self.FK_PurchasingOrder_Currency">
+      <End EntitySet="Currency" Role="Currency" />
+      <End EntitySet="PurchasingOrder" Role="PurchasingOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasingOrder_PaymentMethod" Association="Self.FK_PurchasingOrder_PaymentMethod">
+      <End EntitySet="PaymentMethod" Role="PaymentMethod" />
+      <End EntitySet="PurchasingOrder" Role="PurchasingOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasingOrder_Users" Association="Self.FK_PurchasingOrder_Users">
+      <End EntitySet="Users" Role="Users" />
+      <End EntitySet="PurchasingOrder" Role="PurchasingOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasingOrderDetail_PurchasingOrder" Association="Self.FK_PurchasingOrderDetail_PurchasingOrder">
+      <End EntitySet="PurchasingOrder" Role="PurchasingOrder" />
+      <End EntitySet="PurchasingOrderDetail" Role="PurchasingOrderDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
